@@ -674,7 +674,7 @@ install_video_cards(){
     XF86_DRIVERS=$(pacman -Qe | grep xf86-video | awk '{print $1}')
     [[ -n $XF86_DRIVERS ]] && pacman -Rcsn $XF86_DRIVERS
     package_install "libva-vdpau-driver"
-    aur_package_install nvidia-utils-beta nvidia-beta-dkms nvidia-libgl-beta
+    aur_package_install nvidia-utils-beta nvidia-libgl-beta nvidia-beta-dkms
     replace_line '*options nouveau modeset=1' '#options nouveau modeset=1' /etc/modprobe.d/modprobe.conf
     replace_line '*MODULES="nouveau"' '#MODULES="nouveau"' /etc/mkinitcpio.conf
     mkinitcpio -p linux
@@ -3309,13 +3309,14 @@ install_extra_2(){
         for OPT in ${OPTIONS[@]}; do
           case "$OPT" in
             1)
+              downgrade_for_nvidia
               package_install "dconf-editor gedit gnome-keyring optipng pngcrush redshift screenfetch variety"
               ;;
             2)
               aur_package_install "pacgem telegram-desktop-bin modprobed-db gnome-terminal-fedora smartgit backintime debtap debtap-p64 downgrade enpass-bin fontmatrix-git gdm3setup-utils gdm3setup"
               ;;
             3)
-              package_install "lib32-zlib lib32-ncurses lib32-readline gcc-multilib git gnupg flex bison gperf sdl wxgtk squashfs-tools curl ncurses zlib schedtool perl-switch zip unzip libxslt python2-virtualenv bc"
+              yes | package_install "lib32-zlib lib32-readline gcc-multilib gcc-libs-multilib git gnupg flex bison gperf sdl wxgtk squashfs-tools curl ncurses zlib schedtool perl-switch zip unzip libxslt python2-virtualenv bc"
               ;;
             4)
               aur_package_install "libtinfo lib32-libtinfo lib32-ncurses5-compat-libs ncurses5-compat-libs"

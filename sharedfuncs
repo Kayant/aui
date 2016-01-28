@@ -643,4 +643,12 @@
       fi
     done
   } #}}}
+  downgrade_for_nvidia() { #{{{
+    su - ${username} -c "
+      [[ ! -d nvidia_fix ]] && mkdir nvidia_fix
+      cd nvidia_fix
+      wget https://archive.archlinux.org/packages/x/xf86-input-keyboard/xf86-input-keyboard-1.8.1-1-x86_64.pkg.tar.xz https://archive.archlinux.org/packages/x/xf86-input-libinput/xf86-input-libinput-0.15.0-1-x86_64.pkg.tar.xz https://archive.archlinux.org/packages/x/xf86-input-mouse/xf86-input-mouse-1.9.1-1-x86_64.pkg.tar.xz https://archive.archlinux.org/packages/x/xorg-server/xorg-server-1.17.4-2-x86_64.pkg.tar.xz https://archive.archlinux.org/packages/x/xorg-server-common/xorg-server-common-1.17.4-2-x86_64.pkg.tar.xz
+      sudo pacman -U --noconfirm *.pkg.tar.xz
+    "
+  } #}}}
 #}}}
