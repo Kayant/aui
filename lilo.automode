@@ -31,28 +31,25 @@
   #12) LAMP
   #13) Fonts
   #14) Extra
-  #15) Clean Orphan Packages
-  MAINMENU="1-13 15"
+  #15) More Extra!!!
+  #16) Clean Orphan Packages
+  MAINMENU="1-13 15-16"
 #}}}
 #BASIC SETUP {{{
-  CUPS="y"
   CUSTOMREPO="n"         # Add custom repositories
   FIRMWARE="y"           # Install custom firmwares
   GITTOR="n"
   NFS="n"
-  READAHEAD="y"
   SAMBA="y"
   SSH="y"
-  TLP="n"                # Laptop Power Manager
-  ZRAM="y"
   ZSH="y"
-  OH_MY_ZSH="y"
-  PROPRIETARY_DRIVER="n" # Proprietary (NVIDIA) driver
+  OH_MY_ZSH="n"
+  PROPRIETARY_DRIVER="y" # Proprietary (NVIDIA) driver
   #FONT CONFIGURATION {{{
     # 1) Default
     # 2) Infinality
     # 3) Ubuntu
-    FONTCONFIG=2
+    FONTCONFIG="1"
   #}}}
   #ADDITIONAL FIRMWARE {{{
     # 1) aic94xx-firmware
@@ -84,14 +81,14 @@
   #11) i3
   #12) OpenBox
   #13) Xmonad
-  DESKTOPENV=4
+  DESKTOPENV="1"
   #KDE {{{
     # 1) Choqok
     # 2) Digikam
     # 3) K3b
     # 4) Skrooge
     # 5) Yakuake
-    KDE_OPTIONS="1-5"
+    KDE_OPTIONS=""
   #}}}
   #ESSENTIAL APPS [Enlightenment,LXDE,Awesome,Fluxbox,OpenBox] {{{
     # 1) Display Manager
@@ -107,7 +104,7 @@
     #11) Xcompmgr
     #12) Zathura
     #13) speedtest-cli
-    MISCAPPS="1 3"
+    MISCAPPS="1"
   #}}}
   #DISPLAY MANAGER {{{
     # 1) Elsa
@@ -115,21 +112,21 @@
     # 3) LightDM
     # 4) SSDM
     # 5) Slim
-    DISPLAY_MANAGER="3"
+    DISPLAY_MANAGER="2"
   #}}}
   # 1) Icons Themes
   # 2) GTK2|GTK3 Themes
-  THEMES_OPTIONS="1 2"
+  THEMES_OPTIONS=""
   #ICONS THEMES {{{
     # 1) Moka
     # 2) Nitrux
     # 3) Numix
-    ICONS_THEMES="3"
+    ICONS_THEMES=""
   #}}}
   #GTK THEMES {{{
     # 1) Numix
     # 2) Zukitwo
-    GTK_THEMES="1-2"
+    GTK_THEMES=""
   #}}}
 #}}}
 #NETWORK MANAGER {{{
@@ -138,8 +135,6 @@
   # 3) ConnMan
   # n) None
   NETWORKMANAGER=1
-  #USB 3G MODEM SUPPORT
-  USBMODEM="y"
 #}}}
 #ACCESSORIES {{{
   # 1) Cairo Dock
@@ -158,7 +153,7 @@
   #14) Unified Remote
   #15) Zim
   #16) Plank
-  ACCESSORIES_OPTIONS=""
+  ACCESSORIES_OPTIONS="16"
 #}}}
 #DEVELOPEMENT {{{
   # 1) Atom
@@ -173,7 +168,7 @@
   #10) OpenJDK
   #11) OracleJDK
   #12) NodeJS
-  DEVELOPMENT_OPTIONS="11"
+  DEVELOPMENT_OPTIONS="1 4 5 6 10"
   #ECLIPSE {{{
     # 1) Eclipse Classic
     # 2) Eclipse IDE for C/C++ Developers
@@ -205,22 +200,6 @@
     #15) yeoman
     NODEJS_OPTIONS="2 7 8 9 13 15"
   #}}}
-#}}}
-#OFFICE {{{
-  # 1) Abiword+Gnumeric|Calligra
-  # 2) Calibre
-  # 3) GCStar
-  # 4) Geeknote
-  # 5) Haroopad
-  # 6) Homebank
-  # 7) Impressive
-  # 8) Latex
-  # 9) LibreOffice
-  #10) MediaElch
-  #11) OCRFeeder
-  #12) Xmind
-  OFFICE_OPTIONS="9"
-#}}}
 #SYSTEM TOOLS {{{
   # 1) ClamAV
   # 2) FirewallD
@@ -233,7 +212,7 @@
   # 9) Webmin
   #10) Wine
   #11) Docker
-  SYSTEMTOOLS_OPTIONS="10"
+  SYSTEMTOOLS_OPTIONS="3"
 #}}}
 #GRAPHICS {{{
   # 1) Blender
@@ -247,23 +226,22 @@
   # 9) Shotwell
   #10) Simple Scan
   #11) XnViewMP
-  GRAPHICS_OPTIONS="2-7 9"
+  GRAPHICS_OPTIONS="9"
 #}}}
 #INTERNET {{{
   # 1) Browser
   # 2) Download|Fileshare
-  # 3) Email|RSS
   # 4) Instant Messaging|IRC
   # 5) Mapping Tools
   # 6) VNC|Desktop Share
-  INTERNET_OPTIONS="1-6"
+  INTERNET_OPTIONS="1-4"
   #BROWSER {{{
     # 1) Chrome
     # 2) Chromium
     # 3) Firefox
     # 4) Midori|Rekonq
     # 5) Opera
-    BROWSERS_OPTIONS="3"
+    BROWSERS_OPTIONS="1 3"
   #}}}
   #DOWNLOAD|FILESHARE {{{
     # 1) AeroFS
@@ -278,7 +256,7 @@
     #10) Trasmission
     #11) uGet
     #12) youtube-dl
-    DOWNLOAD_OPTIONS=""
+    DOWNLOAD_OPTIONS="4 7"
   #}}}
   #EMAIL|RSS {{{
     # 1) Liferea
@@ -294,7 +272,7 @@
     # 6) Viber
     # 7) Telegram Desktop
     # 8) qTox
-    IM_OPTIONS="4"
+    IM_OPTIONS="1 7"
   #}}}
   #MAPPING {{{
     # 1) Google Earth
@@ -311,7 +289,7 @@
   # 1) Players
   # 2) Editors|Tools
   # 3) Codecs
-  AUDIO_OPTIONS="1-3"
+  AUDIO_OPTIONS="1 3"
   #PLAYERS {{{
     # 1) Amarok
     # 2) Audacious
@@ -328,7 +306,7 @@
     #13) Timidity++
     #14) Tomahawk
     #15) quodlibet
-    AUDIO_PLAYER_OPTIONS="4"
+    AUDIO_PLAYER_OPTIONS="12"
   #}}}
   #EDITORS|TOOLS {{{
     # 1) Audacity
@@ -336,14 +314,14 @@
     # 3) Google Music Manager
     # 4) OcenAudio
     # 5) Soundconverter|Soundkonverter
-    AUDIO_EDITOR_OPTIONS="2"
+    AUDIO_EDITOR_OPTIONS=""
   #}}}
 #}}}
 #VIDEO {{{
   # 1) Players
   # 2) Editors|Tools
   # 3) Codecs
-  VIDEO_OPTIONS="1-3"
+  VIDEO_OPTIONS="1 3"
   #PLAYERS {{{
     # 1) Audience
     # 2) Gnome Mplayer
@@ -356,7 +334,7 @@
     # 9) SMplayer
     #10) VLC
     #11) Kodi
-    VIDEO_PLAYER_OPTIONS="10"
+    VIDEO_PLAYER_OPTIONS="10 11"
   #}}}
   #EDITORS|TOOLS {{{
     # 1) Arista
@@ -369,7 +347,7 @@
     # 8) Openshot
     # 9) Pitivi
     #10) Transmageddon
-    VIDEO_EDITOR_OPTIONS="1"
+    VIDEO_EDITOR_OPTIONS=""
   #}}}
 #}}}
 #GAMES {{{
@@ -387,7 +365,7 @@
   #12) Terminal
   #13) PlayOnLinux
   #14) Steam
-  GAMES_OPTIONS=""
+  GAMES_OPTIONS="14"
   #ACTION {{{
     # 1) Astromenace
     # 2) Counter-Strike 2D
@@ -512,8 +490,8 @@
   # 2) LAPP - APACHE, POSTGRESQL & PHP
   # 3) LEMP - NGINX, MariaDB & PHP
   # 4) LEPP - NGINX, POSTGRESQL & PHP
-  WEBSERVER=4
-  POSTGIS="n"
+  WEBSERVER=""
+  POSTGIS=""
 #}}}
 #FONTS {{{
   # 1) ttf-dejavu
@@ -523,9 +501,15 @@
   # 5) ttf-ms-fonts
   # 6) ttf-vista-fonts
   # 7) wqy-microhei
-  FONTS_OPTIONS="1-7"
+  FONTS_OPTIONS="3"
 #}}}
 #EXTRA {{{
   # 1) Global Menu
   EXTRA_OPTIONS=""
+#More EXTRAS {{{
+# 1) Pacman stuff"
+# 2) Aur stuff"
+# 3) Android stuff(Pacman)"
+# 4) Android stuff(AUR)"
+  EXTRA_OPTIONS2="1-4"
 #}}}
