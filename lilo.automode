@@ -506,7 +506,10 @@
 #EXTRA {{{
   # 1) Global Menu
   EXTRA_OPTIONS=""
-#EXTRA {{{
-    # 1) Global Menu
+#More EXTRAS {{{
+# 1) Pacman stuff"
+# 2) Aur stuff"
+# 3) Android stuff(Pacman)"
+# 4) Android stuff(AUR)"
   EXTRA_OPTIONS2="1-4"
 #}}}
