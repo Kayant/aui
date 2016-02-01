@@ -20,7 +20,7 @@ You can try it first with a `virtualbox`
 - get the script: ` wget https://github.com/helmuthdu/aui/tarball/master -O - | tar xz`
     - an alternate URL (for less typing) is ` wget http://bit.ly/NoUPC6 -O - | tar xz`
     - super short `wget ow.ly/wnFgh -O aui.zip`
-    - Gitio - ` wget https://git.io/vz7bm -O aui.zip && unzip aui.zip `
+    - Gitio - ` wget https://goo.gl/KNpe11 -O aui.zip && unzip aui.zip `
 
 ## How to use
 - FIFO [system base]: `cd <dir> && ./fifo`
